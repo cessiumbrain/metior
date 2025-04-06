@@ -9,8 +9,11 @@ import Home from './Components/Home/Home';
 import Nav from './Components/Nav/Nav';
 
 function App() {
-  const [user, setUser] = useState('s')
+  const [user, setUser] = useState()
 
+  const navigate = useNavigate()
+
+  //firebase
   const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "metior-926af.firebaseapp.com",
@@ -20,7 +23,6 @@ function App() {
     appId: "1:38745629317:web:3a9789d13876c310077fec"
   };
 
-  const navigate = useNavigate()
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
 
@@ -44,7 +46,7 @@ function App() {
           </Route>
           {/*Unprotected Routes*/}
           <Route path="/signup" element={<Signup app={app} user={user} setUser={setUser}></Signup>}></Route>
-          <Route path="/login" element={<Login setUser={setUser} user={user}></Login>}></Route>
+          <Route path="/login" element={<Login app={app} setUser={setUser} user={user}></Login>}></Route>
 
         </Routes>
 
