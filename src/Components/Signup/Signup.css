@@ -1,0 +1,13 @@
+.Signup h1 {
+  text-align: center;
+}
+.Signup .login-link {
+  display: flex;
+  justify-content: center;
+}
+.Signup .signup-with-google.btn > * {
+  margin: 0px 5px;
+}
+.Signup .error-div {
+  height: 2rem;
+}/*# sourceMappingURL=Signup.css.map */

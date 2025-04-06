@@ -1,0 +1,14 @@
+.Nav{
+    position: absolute;
+    top: 0;
+    .logout {
+        cursor: pointer;
+    }
+}
+
+.expanded {
+    display: block;
+}
+.collapsed {
+    display: none;
+}

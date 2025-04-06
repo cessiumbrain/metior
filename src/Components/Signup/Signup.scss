@@ -1,0 +1,17 @@
+.Signup {
+    h1{
+        text-align:center;
+    }
+    .login-link{
+        display: flex;
+        justify-content: center;
+    }
+    .signup-with-google.btn>*{
+
+        margin: 0px 5px;
+    }
+    .error-div{
+        height: 2rem;
+    }
+  
+}

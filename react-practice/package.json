@@ -1,5 +1,5 @@
 {
-  "name": "metior2.0",
+  "name": "react-practice",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,11 +7,8 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "firebase": "^11.6.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-icons": "^5.5.0",
-    "react-router-dom": "^7.4.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -19,12 +16,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -38,5 +38,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/preset-create-react-app": "^8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-webpack5": "^8.6.12",
+    "@storybook/test": "^8.6.12",
+    "eslint-plugin-storybook": "^0.12.0",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.6.12",
+    "webpack": "^5.98.0"
   }
 }

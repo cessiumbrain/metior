@@ -1,0 +1,15 @@
+.Nav {
+  position: absolute;
+  top: 0;
+}
+.Nav .logout {
+  cursor: pointer;
+}
+
+.expanded {
+  display: block;
+}
+
+.collapsed {
+  display: none;
+}/*# sourceMappingURL=Nav.css.map */
