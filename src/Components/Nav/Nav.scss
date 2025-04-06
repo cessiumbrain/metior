@@ -1,7 +1,14 @@
 .Nav{
     background: grey;
     position: absolute;
+    width: 100vw;
     top: 0;
+    left: 0;
+    padding: .5rem;
+    text-align: center;
+    .down-arrow {
+        cursor: pointer;
+    }
     .logout {
         cursor: pointer;
     }
