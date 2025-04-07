@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from'uuid';
 
 
-export const questionnaires = [
+export const phq9 = 
     {
     name: "Patient Health Questionnaire (PHQ-9)",
     scoringMethod: "sum",
@@ -112,4 +112,3 @@ export const questionnaires = [
         }
     ]
     }
-]
