@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { FaGoogle } from "react-icons/fa6"
+import { FaGoogle, FaCircleExclamation } from "react-icons/fa6"
 import { Navigate, Link } from "react-router-dom";
 import './Signup.css'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
@@ -49,11 +49,14 @@ function Signup(props){
             //create db document for user
             try{
                 const docRef = await setDoc(doc(db, 'users', user.uid),{
-
+                    answers: [],
+                    selectedQuestionnaires: []
                 })
                 //set the logged in user
                 props.setUser({
-                    uid: user.uid
+                    uid: user.uid,
+                    answers: [],
+                    selectedQuestionnaires: []
                 })
             }catch(error){
                 console.log(error)
@@ -96,6 +99,7 @@ function Signup(props){
                     <span>{error}</span>
                 </div>
                 <Link className="login-link" to="/login">Login</Link>
+                <p className="disclaimer"><FaCircleExclamation></FaCircleExclamation> This program is for demonstration purposes, do not enter any real or protected health information</p>
             </div>
         )
     }

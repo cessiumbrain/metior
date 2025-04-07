@@ -1,4 +1,5 @@
 ## To Do
+[ ] - build each component off of home component
 [x] - Routing
 [x] - Login/OAuth
 [ ] - Data Structure
@@ -13,4 +14,5 @@
         [ ] - Take Questionnaire
         [ ] - Add Questionnaires
         [ ] - Your Answers
-            [ ] - AI analysis
+    [ ] - AI analysis
+        [ ] - Submit all answers and info

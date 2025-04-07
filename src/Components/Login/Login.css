@@ -11,4 +11,8 @@
 .Login .error-div {
   height: 2rem;
   color: red;
+}
+.Login .disclaimer {
+  border: 1px solid black;
+  padding: 0.2rem;
 }/*# sourceMappingURL=Login.css.map */

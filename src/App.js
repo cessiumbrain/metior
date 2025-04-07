@@ -1,12 +1,14 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import Login from './Components/Login/Login'
-import Signup from './Components/Signup/Signup'
 import { initializeApp } from 'firebase/app';
 import { useState } from 'react';
 import ProtectedRoutes from './Components/ProtectedRoutes/ProtectedRoutes';
 import Home from './Components/Home/Home';
 import Nav from './Components/Nav/Nav';
+import Profile from './Components/Profile/Profile';
+import Login from './Components/Login/Login'
+import Signup from './Components/Signup/Signup';
+import MyQuestionnaires from './Components/MyQuestionnaires/MyQuestionnaires';
 
 function App() {
   const [user, setUser] = useState()
@@ -43,6 +45,8 @@ function App() {
           {/*User Protected Routes*/}
           <Route path="/" element={<ProtectedRoutes user={user}/>}>
             <Route path="/home" element={<Home></Home>}></Route>
+            <Route path="/profile" element={<Profile user={user}></Profile>}></Route>
+            <Route path="/my-questionnaires" element={<MyQuestionnaires user={user}></MyQuestionnaires>}></Route>
           </Route>
           {/*Unprotected Routes*/}
           <Route path="/signup" element={<Signup app={app} user={user} setUser={setUser}></Signup>}></Route>

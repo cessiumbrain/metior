@@ -29,6 +29,11 @@ input {
   width: 100%;
 }
 
+.disclaimer {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
 @media (max-width: 728px) {
   body .App {
     border: 1px solid red;

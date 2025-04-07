@@ -1,5 +1,5 @@
 import './Login.css'
-import { FaGoogle } from 'react-icons/fa'
+import { FaGoogle, FaExclamationCircle } from 'react-icons/fa'
 import { Navigate, Link } from 'react-router-dom'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { doc, getDoc, getFirestore } from 'firebase/firestore';
@@ -58,7 +58,8 @@ function Login(props){
                 <div onClick={login}class="btn">Login</div>
                 <div className="error-div">{error}</div>
                 <Link to="/signup">Sign Up</Link>
-                <Link>Forgot Password</Link>
+                {/* <Link>Forgot Password</Link> */}
+                <p className="disclaimer"><FaExclamationCircle></FaExclamationCircle> This program is for demonstration purposes, do not enter any real or protected health information</p>
             </div>
         )
     }
